@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class GopMang {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner;
+        scanner = new Scanner(System.in);
 
         System.out.print("Enter size of first array: ");
         int size1 = scanner.nextInt();
@@ -21,14 +22,10 @@ public class GopMang {
         }
 
         System.out.print("Array 1: " + "\t");
-        for (int i = 0; i < array1.length; i++) {
-            System.out.print(array1[i] + "\t");
-        }
+        printArray(array1);
         System.out.println();
         System.out.print("Array 2: " + "\t");
-        for (int i = 0; i < array2.length; i++) {
-            System.out.print(array2[i] + "\t");
-        }
+        printArray(array2);
 
         System.out.println();
         System.out.print("Array 3: " + "\t");
@@ -41,6 +38,12 @@ public class GopMang {
         }
         for (int i = 0; i < array3.length; i++) {
             System.out.print(array3[i] + "\t");
+        }
+    }
+
+    private static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + "\t");
         }
     }
 }
