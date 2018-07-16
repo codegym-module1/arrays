@@ -1,15 +1,22 @@
 import java.util.Scanner;
 
-public class Array {
+public class Arrays {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] array = {5, 2, 4, 9, 3, 5, 1};
+        System.out.print("Enter array size: ");
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        System.out.println("Enter values: ");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = scanner.nextInt();
+        }
 
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "\t");
         }
 
         System.out.println();
+
         int temp1 = array[0];
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = i + 1; j < array.length; j++) {
